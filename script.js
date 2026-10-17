@@ -36,5 +36,5 @@ pick('#att',b=>att=b.dataset.v);pick('#gs',b=>guests=b.textContent);
 $('#send').onclick=function(){
   const name=$('#nm').value.trim()||'A guest';
   const msg=`Hello Aria & Rohan, this is ${name}. I ${att} your wedding invitation. Guests: ${guests}.`;
-  this.href='https://wa.me/91+9391776643?text='+encodeURIComponent(msg);
+  this.href='https://wa.me/919391776643?text='+encodeURIComponent(msg);
 };
