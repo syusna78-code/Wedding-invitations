@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aria & Rohan · Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="sprig" viewBox="0 0 120 60" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+<path d="M4 30C34 28 76 30 116 30"/>
+<path d="M30 30c-4-9-1-16 7-20 4 8 2 15-7 20zM52 30c-3-10 1-17 9-21 4 9 1 17-9 21zM76 30c-2-9 2-15 9-18 3 8 0 15-9 18zM38 30c-6 7-5 14 1 19 5-6 4-14-1-19zM62 30c-5 8-3 15 4 20 4-7 2-15-4-20zM86 30c-4 6-3 12 3 16 3-5 2-12-3-16z"/>
+<circle cx="104" cy="30" r="3"/><circle cx="14" cy="30" r="2"/></symbol>
+<symbol id="bloom" viewBox="-30 -30 60 60" fill="none" stroke="currentColor" stroke-width="1">
+<g id="pt"><ellipse cy="-13" rx="6" ry="13"/></g><use href="#pt" transform="rotate(72)"/><use href="#pt" transform="rotate(144)"/><use href="#pt" transform="rotate(216)"/><use href="#pt" transform="rotate(288)"/><circle r="3"/></symbol>
+</defs></svg>
+
+<div id="app">
+  <main class="stage">
+
+    <section class="page on" id="home">
+      <svg class="orn"><use href="#sprig"/></svg>
+      <p class="eyebrow">Together with their families</p>
+      <h1>Aria <em>&</em> Rohan</h1>
+      <p class="eyebrow">Request the pleasure of your company</p>
+      <div class="rule"></div>
+      <p class="big">14 February 2027</p>
+      <p class="muted">The Rose Garden Estate · Jaipur</p>
+      <div class="count">
+        <div><b id="d">0</b><span>Days</span></div><div><b id="h">0</b><span>Hours</span></div>
+        <div><b id="m">0</b><span>Min</span></div><div><b id="s">0</b><span>Sec</span></div>
+      </div>
+      <a class="btn ghost" id="cal" download="Aria-Rohan-Wedding.ics" href="#">Add to calendar</a>
+    </section>
+
+    <section class="page" id="couple">
+      <p class="eyebrow">The couple</p>
+      <div class="pair">
+        <div class="person"><div class="mono">A</div><h2>Aria Sharma</h2><p class="muted">Daughter of<br>Mr. &amp; Mrs. Sharma</p></div>
+        <svg class="mid"><use href="#bloom"/></svg>
+        <div class="person"><div class="mono">R</div><h2>Rohan Mehta</h2><p class="muted">Son of<br>Mr. &amp; Mrs. Mehta</p></div>
+      </div>
+      <div class="rule"></div>
+      <ol class="story">
+        <li><b>2019</b><span>We met over a shared umbrella</span></li>
+        <li><b>2022</b><span>Said “I love you” in autumn</span></li>
+        <li><b>2026</b><span>A proposal beneath fairy lights</span></li>
+        <li><b>2027</b><span>Our forever begins</span></li>
+      </ol>
+    </section>
+
+    <section class="page" id="events">
+      <p class="eyebrow">Programme</p>
+      <div class="events" id="evList"></div>
+    </section>
+
+    <section class="page" id="venue">
+      <p class="eyebrow">Venue</p>
+      <h2 class="title">The Rose Garden Estate</h2>
+      <p class="muted">12 Blossom Lane, Jaipur, Rajasthan</p>
+      <div class="map" aria-hidden="true"><svg viewBox="0 0 300 110" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 70C60 45 110 90 170 62S260 38 300 55" stroke="var(--line)" stroke-width="10" fill="none"/>
+        <path d="M60 0C80 35 120 60 140 110" stroke="var(--line)" stroke-width="6" fill="none"/>
+        <path d="M200 22c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z" fill="var(--accent)"/><circle cx="200" cy="38" r="5" fill="var(--bg)"/></svg></div>
+      <div class="info"><div><b>Dress code</b><span>Pastel &amp; floral</span></div><div><b>Parking</b><span>Complimentary valet</span></div></div>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Rose+Garden+Estate+Jaipur" target="_blank" rel="noopener">Open in Maps</a>
+    </section>
+
+    <section class="page" id="rsvp">
+      <p class="eyebrow">Kindly reply by 1 January 2027</p>
+      <h2 class="title">RSVP</h2>
+      <form class="form" onsubmit="return false">
+        <input id="nm" type="text" placeholder="Full name" maxlength="40" autocomplete="name">
+        <div class="seg" id="att"><button type="button" class="s" data-v="joyfully accept">Accept</button><button type="button" data-v="regretfully decline">Decline</button></div>
+        <div class="seg" id="gs"><button type="button" class="s">1</button><button type="button">2</button><button type="button">3</button><button type="button">4</button></div>
+        <p class="muted small">Number of guests</p>
+        <a class="btn" id="send" href="#" target="_blank" rel="noopener">Send via WhatsApp</a>
+      </form>
+    </section>
+
+  </main>
+  <nav id="nav"><button class="on">Home</button><button>Couple</button><button>Events</button><button>Venue</button><button>RSVP</button></nav>
+</div>
+
+<div id="intro"><svg class="orn"><use href="#sprig"/></svg><div class="mono big">A &amp; R</div><p class="eyebrow">You are invited</p><button class="btn" id="open">Open invitation</button></div>
+<script src="script.js"></script>
+</body>
+</html>
